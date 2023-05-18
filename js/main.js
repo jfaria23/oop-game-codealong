@@ -1,9 +1,10 @@
 class Player {
   constructor() {
-    this.positionX = 50;
-    this.positionY = 0;
     this.width = 10;
     this.height = 10;
+    this.positionX = 50;
+    this.positionY = 0;
+
     this.domElement = null;
 
     this.createDomElement();
@@ -39,10 +40,10 @@ const player = new Player();
 
 class Obstacle {
   constructor() {
-    this.positionX = 50;
-    this.positionY = 100;
     this.width = 20;
     this.height = 10;
+    this.positionX = 50 - this.width / 2;
+    this.positionY = 100;
 
     this.domElement = null;
 
@@ -95,21 +96,6 @@ setInterval(() => {
   });
 }, 60);
 
-// setInterval(() => {
-//     obstaclesArr.forEach((obstacleInstance) => {
-
-//         obstacleInstance.moveDown();
-
-//         if (obstacleInstance.positionX < player.positionX + player.width &&
-//             obstacleInstance.positionX + obstacleInstance.width > player.positionX &&
-//             obstacleInstance.positionY < player.positionY + player.height &&
-//             obstacleInstance.height + obstacleInstance.positionY > player.positionY) {
-//             console.log("game over my fren");
-//             location.href = './gameover.html';
-//         }
-
-//     });
-// }, 60);
 // attach event listeners...
 document.addEventListener("keydown", (event) => {
   console.log("user pressed a key");
